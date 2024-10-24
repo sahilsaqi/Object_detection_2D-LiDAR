@@ -1,0 +1,14 @@
+<launch>
+  <!-- Load Parameters -->
+  <arg name="robot_id" value="robot_1"/>
+
+  <!-- Start the Multi Object Detector Node -->
+  <node name="multi_object_detector_node" pkg="object_detection_2" type="multi_object_detector_node.py" output="screen">
+    <!-- Pass parameters if needed -->
+    <param name="robot_id" value="$(arg robot_id)"/>
+  </node>
+
+  <!-- Start other necessary nodes (e.g., laser scan publisher, etc.) -->
+  <!-- Example: -->
+  <!-- <node name="laser_scan_publisher" pkg="some_package" type="laser_scan_publisher_node" output="screen"/> -->
+</launch>
